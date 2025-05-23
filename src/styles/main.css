@@ -1,0 +1,81 @@
+:root {
+  --ui-bg: #f7f8fa;
+  --ui-border: #d0d4dd;
+  --ui-accent: #0066ff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid var(--ui-border);
+  background: white;
+  transition: background 0.15s;
+}
+
+button:hover {
+  background: #eef2ff;
+}
+
+app-root {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--ui-border);
+  background: var(--ui-bg);
+}
+
+.buffer-zone,
+.workspace-wrapper {
+  flex: 1 1 0;
+  overflow: hidden;
+}
+
+.workspace-wrapper {
+  flex: 1 1 0;
+  display: flex;
+  position: relative;
+  min-height: 300px;
+}
+
+.workspace-canvas {
+  display: block;
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 400px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.viewport {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background: #fefefe;
+}
+
+poly-item {
+  display: inline-block;
+}
+
+poly-item svg {
+  width: 80px;
+  height: 80px;
+  pointer-events: none;
+}
